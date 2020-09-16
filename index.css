@@ -1,0 +1,42 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header{
+    position: relative;
+}
+
+/* Top Nav Bar CSS */
+.topnav {
+    background-color: rgb(43, 36, 40);
+    overflow: hidden;
+    position: relative;
+}
+.topnav a{
+    float: left;
+    color: rgb(235, 148, 202);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.topnav a:hover {
+    background-color: rgb(226, 43, 134);
+    color: rgb(29, 29, 29);
+}
+.topnav a.active{
+    background-color: #702d47;
+    color: white;
+}
+.topnav a.title{
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 11px 32px;
+    color: white;
+}
+.topnav a.title:hover{
+    background-color:rgb(43, 36, 40);
+    color: white;
+}
+/*end of Nav Bar CSS*/
