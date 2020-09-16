@@ -1,2 +1,4 @@
 # nekkiichi.github.io
-Web private
+Web private for me 
+---
+just for train my skills
