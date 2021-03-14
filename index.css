@@ -41,3 +41,14 @@ header{
     color: white;
 }
 /*end of Nav Bar CSS*/
+
+footer {
+    background-color: #303030;
+    color: #c9497b;
+    height: 120px;
+}
+
+footer h2{
+    padding: 15px;
+    float: top left;
+}
