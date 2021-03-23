@@ -12,6 +12,7 @@ header{
     background-color: rgb(43, 36, 40);
     overflow: hidden;
     position: relative;
+    display: flex;
 }
 .topnav a{
     float: left;
