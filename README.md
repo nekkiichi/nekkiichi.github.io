@@ -1,4 +1,4 @@
 # nekkiichi.github.io
 Web private for me 
 ---
-just for train my skills
+this is in development state, so don't touch it, please...
