@@ -1,9 +1,14 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
 }
 
 header{
     position: relative;
+}
+
+main {
+    margin: 10px;
 }
 
 /* Top Nav Bar CSS 
@@ -46,7 +51,7 @@ header{
 footer {
     background-color: #303030;
     color: #c9497b;
-    height: 120px;
+    min-height: 240px;
 }
 
 footer h2{
