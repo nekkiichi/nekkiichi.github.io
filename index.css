@@ -14,25 +14,25 @@ main {
 /* Top Nav Bar CSS 
    Begin:*/
 .topnav {
-    background-color: rgb(43, 36, 40);
+    background-color: #2b2428;
     overflow: hidden;
     position: relative;
     display: flex;
 }
 .topnav a{
     float: left;
-    color: rgb(235, 148, 202);
+    color: #eb94ca;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 18px;
 }
 .topnav a:hover {
-    background-color: rgb(226, 43, 134);
+    background-color: #e22b86;
     color: rgb(29, 29, 29);
 }
 .topnav a.active{
-    background-color: #702d47;
+    background-color: #712d47;
     color: white;
 }
 .topnav a.title{
