@@ -1,9 +1,81 @@
 //edit the css file from this, remember to install autocompile LESS!
-@color-primary: #e22b86;
-@color-secondary: #712d47;
-
+@color-primary: #903749;
+@color-secondary: #e84545;
+@color-third: #2b2e4a;
+@color-fourth: #3f2838;
+@color-fifth: #f35656;
+@color-font: #c9cacc;
 
 .no-margin {
     margin: 0px;
 }
+
+body {
+    font-family: monospace;
+    background-color: @color-fourth;
+    color:@color-font;
+    .no-margin();
+    font-size: 12pt;
+    
+}
+
+main {
+    margin: 15px;
+    padding: 12px 12%;
+}
+
+header {
+    position: relative;
+}
+
+h1 {
+    font-family: 'Train One';
+    font-weight: 200;
+    font-size: 21pt;
+    color: @color-secondary;
+}
+
+footer {
+    background-color: @color-primary;
+    color: @color-third;
+    min-height: 120px;
+    
+}
+
+footer h2{
+    padding: 15px;
+    text-align: center;
+}
+
+.topnav {
+    background-color: @color-secondary;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+.topnav a{
+    float: left;
+    color: @color-fourth;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.topnav a:hover {
+    background-color: @color-fifth;
+    color: #1d1d1d;
+}
+.topnav a.active{
+    background-color: @color-primary;
+}
+.topnav a.title{
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 11px 32px;
+    color: white;
+}
+
+/*end of Nav Bar CSS*/
+
 
