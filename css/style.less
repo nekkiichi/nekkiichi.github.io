@@ -5,77 +5,151 @@
 @color-fourth: #3f2838;
 @color-fifth: #f35656;
 @color-font: #c9cacc;
+@color-link: #bada55;
 
+@img-title-size: 200px;
+
+* {
+  position: relative;
+  box-sizing: border-box;
+}
 .no-margin {
-    margin: 0px;
+  margin: 0px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.content-center {
+  text-align: center;
+}
+
+.h1-title {
+  font-size: 32px;
+}
+
+.use-flex {
+  display: flex;
+}
+
+.pos-fixed {
+  position: fixed;
+  z-index: 9999;
+}
+
+.top {
+  top: 0;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.empty {
+  min-height: 50px;
+}
+
+
+/*Main:*/
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: monospace;
-    background-color: @color-fourth;
-    color:@color-font;
-    .no-margin();
-    font-size: 12pt;
-    
-}
-
-main {
-    margin: 15px;
-    padding: 12px 5%;
+  font-family: monospace;
+  background-color: @color-fourth;
+  color: @color-font;
+  .no-margin();
+  font-size: 16px;
 }
 
 header {
-    position: relative;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(7, 4, 4, 0.8);
 }
 
-h1 {
-    font-family: 'Train One';
-    font-weight: 200;
-    font-size: 21pt;
-    color: @color-secondary;
+a {
+  text-decoration: none;
+  color: @color-link;
 }
 
-footer {
-    background-color: @color-primary;
-    color: @color-third;
-    min-height: 120px;
-    
+nav {
+  .no-padding();
+  
 }
 
-footer h2{
-    padding: 15px;
-    text-align: center;
+section {
+  display: block;
 }
 
-.topnav {
-    background-color: @color-secondary;
-    overflow: hidden;
-    position: relative;
-    display: flex;
+/*Custom Class*/
+
+.navbar {
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: baseline;
+  z-index: 999;
 }
-.topnav a{
-    float: left;
-    color: @color-fourth;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 18px;
+
+.navbar ul {
+  list-style-type: none;
+  display: inherit;
+  .no-padding();
+  .no-margin();
+  z-index: inherit;
 }
-.topnav a:hover {
-    background-color: @color-fifth;
-    color: #1d1d1d;
+
+.navbar li {
+  padding: 15px;
+  transition: background-color 0.5s;
 }
-.topnav a.active{
-    background-color: @color-primary;
+
+.navbar a {
+  height: 100%;
 }
-.topnav a.title{
-    font-family: Arial;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 11px 32px;
-    color: white;
+
+.navbar li:hover {
+  background-color: @color-secondary;
+}
+
+.bg-primary {
+  background-color: @color-primary;
+}
+
+.jumbotron {
+  overflow: hidden;
+}
+
+.profile-pic {
+  width: @img-title-size;
+  height: @img-title-size;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.content-satu {
+  background-color: #222;
+  min-height: 300px;
+  padding: 10px;
+}
+
+.flex-columm {
+  background-color: #425f17;
+  padding: 20px;
+  margin-bottom: 10px;
 }
 
 /*end of Nav Bar CSS*/
 
+@media (min-width: 900px) {
+  .content-satu {
+    display: flex;
+    justify-content: space-between;
+  }
 
+  .flex-columm {
+    width: 33%;
+  }
+}

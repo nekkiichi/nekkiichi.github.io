@@ -1,61 +1,114 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+}
 .no-margin {
   margin: 0px;
+}
+.no-padding {
+  padding: 0;
+}
+.content-center {
+  text-align: center;
+}
+.h1-title {
+  font-size: 32px;
+}
+.use-flex {
+  display: flex;
+}
+.pos-fixed {
+  position: fixed;
+  z-index: 9999;
+}
+.top {
+  top: 0;
+}
+.circle {
+  border-radius: 50%;
+}
+.empty {
+  min-height: 50px;
+}
+/*Main:*/
+html {
+  scroll-behavior: smooth;
 }
 body {
   font-family: monospace;
   background-color: #3f2838;
   color: #c9cacc;
   margin: 0px;
-  font-size: 12pt;
-}
-main {
-  margin: 15px;
-  padding: 12px 5%;
+  font-size: 16px;
 }
 header {
-  position: relative;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(7, 4, 4, 0.8);
 }
-h1 {
-  font-family: 'Train One';
-  font-weight: 200;
-  font-size: 21pt;
-  color: #e84545;
-}
-footer {
-  background-color: #903749;
-  color: #2b2e4a;
-  min-height: 120px;
-}
-footer h2 {
-  padding: 15px;
-  text-align: center;
-}
-.topnav {
-  background-color: #e84545;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-}
-.topnav a {
-  float: left;
-  color: #3f2838;
-  text-align: center;
-  padding: 14px 16px;
+a {
   text-decoration: none;
-  font-size: 18px;
+  color: #bada55;
 }
-.topnav a:hover {
-  background-color: #f35656;
-  color: #1d1d1d;
+nav {
+  padding: 0;
 }
-.topnav a.active {
+section {
+  display: block;
+}
+/*Custom Class*/
+.navbar {
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: baseline;
+  z-index: 999;
+}
+.navbar ul {
+  list-style-type: none;
+  display: inherit;
+  padding: 0;
+  margin: 0px;
+  z-index: inherit;
+}
+.navbar li {
+  padding: 15px;
+  transition: background-color 0.5s;
+}
+.navbar a {
+  height: 100%;
+}
+.navbar li:hover {
+  background-color: #e84545;
+}
+.bg-primary {
   background-color: #903749;
 }
-.topnav a.title {
-  font-family: Arial;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 11px 32px;
-  color: white;
+.jumbotron {
+  overflow: hidden;
+}
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+}
+.content-satu {
+  background-color: #222;
+  min-height: 300px;
+  padding: 10px;
+}
+.flex-columm {
+  background-color: #425f17;
+  padding: 20px;
+  margin-bottom: 10px;
 }
 /*end of Nav Bar CSS*/
+@media (min-width: 900px) {
+  .content-satu {
+    display: flex;
+    justify-content: space-between;
+  }
+  .flex-columm {
+    width: 33%;
+  }
+}
