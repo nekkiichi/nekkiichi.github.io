@@ -5,9 +5,17 @@
 @color-fourth: #3f2838;
 @color-fifth: #f35656;
 @color-font: #c9cacc;
-
+@color-link: #bada55;
 .no-margin {
     margin: 0px;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -15,65 +23,53 @@ body {
     background-color: @color-fourth;
     color:@color-font;
     .no-margin();
-    font-size: 12pt;
+    font-size: 16px;
     
 }
 
-main {
-    margin: 15px;
-    padding: 12px 5%;
-}
-
-header {
-    position: relative;
-}
-
-h1 {
-    font-family: 'Train One';
-    font-weight: 200;
-    font-size: 21pt;
-    color: @color-secondary;
-}
-
-footer {
-    background-color: @color-primary;
-    color: @color-third;
-    min-height: 120px;
-    
-}
-
-footer h2{
-    padding: 15px;
-    text-align: center;
-}
-
-.topnav {
-    background-color: @color-secondary;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-}
-.topnav a{
-    float: left;
-    color: @color-fourth;
-    text-align: center;
-    padding: 14px 16px;
+a {
     text-decoration: none;
-    font-size: 18px;
+    color: @color-link;
 }
-.topnav a:hover {
-    background-color: @color-fifth;
-    color: #1d1d1d;
+
+nav {
+    .no-padding();
+    box-shadow: 0 0 15px rgba(7, 4, 4, 0.3);
 }
-.topnav a.active{
+
+.navbar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: baseline;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: inherit;
+    .no-padding();
+    .no-margin();
+}
+
+.navbar li {
+    padding: 15px;
+    transition: background-color 0.5s;
+}
+
+.navbar a {
+    height: 100%;
+}
+
+.navbar li:hover {
+    background-color: @color-secondary;
+    
+    
+}
+
+.bg-primary {
     background-color: @color-primary;
-}
-.topnav a.title{
-    font-family: Arial;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 11px 32px;
-    color: white;
 }
 
 /*end of Nav Bar CSS*/
