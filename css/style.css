@@ -99,8 +99,25 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
   height: auto;
-  background-color: #cfcfcf;
+  background-color: #382b0a;
   padding: 80px 20px;
+  color: #ddd;
+}
+.jumbotron h1 {
+  font-size: 36px;
+}
+.jumbotron p {
+  text-align: center;
+}
+.potrait-canvas {
+  overflow: hidden;
+  border-radius: 200px;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 200px;
+  border: solid 5px #e9d62a;
 }
