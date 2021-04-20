@@ -2,10 +2,10 @@
 :root {
 	--color-logo-bg: #111;
 	--color-nav-bg: #E8E9EB;
-	--color-font: #eee;
+	--color-font: #585858;
 	--color-font-a: #493e2b;
 	--color-font-a-title: orange;
-	--font-family: sans-serif;
+	--font-family: "Roboto", "Segoe UI", Arial, sans-serif;
 }
 
 * {
@@ -20,14 +20,24 @@ a {
 	color: #333;
 }
 
+p {
+	color: var(--color-font);
+}
+
+.three-two-grid {
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+}
+
 //navbar begin
 nav {
 	background-color: var(--color-nav-bg);
 	color: var(--color-font);
 	display: flex;
 	height: 9vh;
+	width: 100%;
 	align-items: center;
-	position: relative;
+	position: fixed;
 	overflow: visible;
 	box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.2);
 	z-index: 1;
@@ -60,6 +70,7 @@ nav {
 			justify-content: space-around;
 			align-items: center;
 			height: 100%;
+			color: var(--color-font-a-title);
 		}
 		img {
 			position: relative;
@@ -108,20 +119,25 @@ nav {
 .jumbotron {
 	overflow: hidden;
 	position: relative;
-	display: flex;
 	align-items: center;
-	justify-content: center;
-	flex-direction: column;
 	width: 100%;
 	height: auto;
 	background-color: var(--color-nav-bg);
-	padding: 80px 20px;
 	color: #333;
+	div img {
+		width: 100%;
+		height: auto;
+	}
+	div:last-child {
+		display: block;
+		padding: 0 10px;
+	}
 	h1 {
-		font-size: 2.2rem;
+		font-size: 3rem;
+		line-height: 200%;
 	}
 	p {
-		text-align: center;
+		line-height: 150%;
 	}
 }
 //end jumbotron
