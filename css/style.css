@@ -24,11 +24,20 @@ p {
   color: var(--color-font);
 }
 
+section {
+  width: 100%;
+}
+
 .three-two-grid {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 2fr;
       grid-template-columns: 3fr 2fr;
+}
+
+.simple-title-n-p {
+  position: relative;
+  z-index: 1;
 }
 
 nav {
@@ -46,7 +55,7 @@ nav {
   overflow: visible;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 900;
 }
 
 nav a.nav-title {
@@ -71,7 +80,7 @@ nav a.nav-title {
   border-radius: 0 5px 5px 0;
   -webkit-transition: padding ease 0.5s;
   transition: padding ease 0.5s;
-  z-index: 3;
+  z-index: 901;
 }
 
 nav a.nav-title:hover {
@@ -158,6 +167,8 @@ nav ul li a:hover {
   height: auto;
   background-color: var(--color-nav-bg);
   color: #333;
+  -webkit-perspective: 1px;
+          perspective: 1px;
 }
 
 .jumbotron div img {
@@ -167,7 +178,7 @@ nav ul li a:hover {
 
 .jumbotron div:last-child {
   display: block;
-  padding: 0 10px;
+  padding: 20px 10px;
 }
 
 .jumbotron h1 {
@@ -179,19 +190,46 @@ nav ul li a:hover {
   line-height: 150%;
 }
 
-.potrait-canvas {
-  overflow: hidden;
-  border-radius: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 200px;
-  width: 200px;
-  border: solid 5px var(--color-font-a-title);
+.parallax {
+  width: 100%;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-transform: translateZ(-1px) scale(1.8);
+          transform: translateZ(-1px) scale(1.8);
+}
+
+.jumbo-image {
+  background-image: url("../img/electricity.jpg");
+  height: 100vh;
+  width: auto;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-attachment: fixed;
+  background-size: contain;
+  -webkit-transform: translateX(-200px) translateY(30px);
+          transform: translateX(-200px) translateY(30px);
+}
+
+.section-2 {
+  min-height: 110vh;
+}
+
+@media screen and (max-width: 800px) {
+  .three-two-grid {
+    -ms-grid-columns: (minmax(100%, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+  .parallax {
+    -webkit-transform: scale(1) translateZ(0);
+            transform: scale(1) translateZ(0);
+  }
+  .jumbo-image {
+    -webkit-transform: translateX(0) translateY(0);
+            transform: translateX(0) translateY(0);
+    min-width: 100px;
+    height: 70vh;
+    background-position: left top;
+  }
 }
 
 @-webkit-keyframes sine {
